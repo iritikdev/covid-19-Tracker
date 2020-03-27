@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,500,600,800|Poppins:400,500,600,700,800,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+   font-family: 'Muli', sans-serif;
+   background-color: #151933 !important;
+}
+.navbar{
+    background-color: #1a253f !important;
+     font-family: 'poppins', sans-serif !important;
+     
+}
+.navbar .navbar-brand{
+    color: #7081b9;
+    font-weight: 300;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar .navbar-brand:hover{
+    color: #7081b9;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .hideElement {
+      display: none;
+    }
+  }
+
+.card-covid{
+    box-shadow: 7px 7px 12px -2px rgba(0,0,0,0.1);
+    padding: 15px 10px 10px 10px;
+    margin-top: 15px;
+    background-color: #1a253f;
+    box-sizing: border-box;
+            
+}
+
+.card-covid-country{
+    background-color: #1a253f;
+    box-shadow: 7px 7px 12px -2px rgba(0,0,0,0.1);
+    padding: 11px 10px 10px 10px;
+    margin: 5px 4px 4px 5px;
+}
+.card-covid-country img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 7px 7px 12px -2px rgba(124, 122, 122, 0.1);
+    margin-right: 3px;
+}
+.country-name{
+    font-size: 14px;
+    color:#eff2f9;
+    cursor: pointer;
+    font-family: 'poppins',sans-serif;
+}
+.card-covid p {
+    color: #7081b9;
+}
+.btn-blue{
+    background-color: #2b55cc;
+    color:#fff;
+    outline: none;
+    font-family: 'Muli',sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 50%;
+
+}
+.btn-tab{
+    background-color: #4d79f6;
+    color:#fff;
+    outline: none;
+    font-family: 'poppins',sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 3px 10px 2px 10px;
+}
+
+.hideElement{
+    font-family: 'Muli',sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+.card-covid h3{
+    font-family: 'poppins', sans-serif !important;
+    color: #eff2f9;
+    font-size: 24px;
+}
+.card-covid .covid-num{
+    font-size: 22px;
+}
+.allDate{
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 15px;
+}
+.inputArea{
+    background-color: #1a253f;
+    color: #7081b9;  
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color:green;
+      
+      
+}
+input:focus {
+    border-color: green
+  }
+
+.inputArea::after{
+    border-bottom: 1px solid #2b55cc;
+}
+.btnText{
+    background-color: #1a253f;
+    border: none;
+    color: #eff2f9;
+}
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+    align-items: center;
+}
+footer p{
+    margin: 50px 0 20px 0;
+    color:#eff2f9 ;
+    font-size: 14px;
+    font-weight: 200;
+}
+.country-all{
+    font-size: 12px;
+    color:#eff2f9;
+    cursor: pointer;
+}
+.fix-tab-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    
+}
+.fix-tab{
+    border-top: 1px solid green;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  text-align: center;
+    bottom: 0;
+    position: fixed;
+    background-color: #1A253F;
+    display: block;
+}
+.fix-tab p{
+    color: #7081b9;
+    margin-top: 10px;
+}
+.btn1{
+    margin-top: 5px;
+    font-family: 'poppins',sans-serif;
+    
+    
+}
+.swal2-title{
+    font-family: 'poppins',sans-serif;
+}

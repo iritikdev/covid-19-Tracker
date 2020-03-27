@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Covid-19 Tracker</title>
+		<link rel="shortcut icon" href="img/virus.png" type="image/x-icon">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+			<!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+				<!-- Bootstrap core CSS -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style type="text/css">
+        
+			.spacer-10{
+				height: 10px; 
+				width: auto;
+			}
+			.spacer-20{
+				height: 20px; 
+				width: auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="humburger-menu">
+			<!-- As a heading -->
+			<nav class="navbar navbar-light bg-light">
+				<span class="navbar-brand mb-0 h1"><img src="img/virus.png" alt="" width="40"> COVID-19 Coronavirus Pandemic</span>
+				<span class="hideElement" style="color: #fff;">
+					<button class="btn btn-blue">
+						<i class="fa fa-clock-o" style="font-size: 18px;;"></i>
+					</button>  <%= update %> 
+				</span>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="spacer-20"></div>
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<div class="card-covid text-center">
+						<h3>Coronavirus Cases</h3>
+						<p class="covid-num"> <%= cases %>   </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<div class="card-covid text-center">
+						<h3>Deaths</h3>
+						<p class="covid-num"><%= deaths %> </p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-6">
+					<div class="card-covid text-center">
+						<h3>Recovered</h3>
+						<p class="covid-num"> <%= recovered %> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="spacer-10"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card-covid">
+						<div class="allDate">
+							<span class="btn-tab" >Report coronavirus cases</span>
+							<h3 style="margin-top: 20px;">Confirmed Cases and Deaths by Country, Territory, or Conveyance</h3>
+							<p>The coronavirus COVID-19 is affecting 194 countries 
+		and territories around the world and 1 international conveyance (the Diamond Princess cruise ship 
+		harbored in Yokohama, Japan). The day is reset after midnight GMT+0.</p>
+							<div class="spacer-10"></div>
+							<div class="row">
+								<div class="col-sm-6">
+									<span class="btn-tab">NOW</span>
+								</div>
+								<div class="col-sm-6">
+									<input type="text" placeholder="Enter country name" class="inputArea" id="myInput">
+										<button type="submit" class="btnText" >
+											<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="spacer-20"></div>
+			<div class="container">
+			
+			<div >
+				<div class="flexContainer" id="list">
+				<% allcountery.forEach(country => { %>
+					<span class="card-covid-country" id="covidId"> 
+						
+							<img src="<%=country.countryInfo.flag%> " alt="">
+							<p class="country-name"><a href="#" style="color: #fff; text-decoration: none;"><%= country.country %></a></p>
+						
+						
+						
+						<br/>
+						<span class="country-all">Total Cases: <%= country.cases%></span><br/>
+						<span class="country-all">Today Cases: <%= country.todayCases%></span><br/>
+						<span class="country-all">Total Deaths: <%= country.deaths%></span><br/>
+						<span class="country-all">Today Deaths: <%= country.todayDeaths%></span><br/>
+
+						<span class="country-all">Total Recovered: <%= country.recovered%></span><br/>
+
+						<span class="country-all">Active Cases: <%= country.active%></span><br/>
+						<span class="country-all">Critical Cases: <%= country.critical%></span>
+					</span>
+					
+			
+			<% }) %>
+		
+		</div>
+	</div>
+
+		</div>
+
+			<div class="container">
+				<footer class="text-center">
+					<p>Created By Hrithik Sharma</p>
+				</footer>
+			</div>
+
+			<div class="fix-tab">
+				<div class="fix-tab-container">
+					
+					<p> <img src="img/virus.png" alt="" width="30"> COVID - 19 Checker</p>
+					<span><a href="https://covid.bhaarat.ai/workflow" class="btn btn-success btn1">click here</a></span>
+				</div>
+			</div>
+			
+			<script>
+				setTimeout(
+					function popup() {
+						Swal.fire({
+						title: 'Are you support Janta Curfew ?',
+						text: "If support, Take a Pledge for India",
+						icon: '',
+						
+						showCancelButton: true,
+						confirmButtonColor: 'green',
+						cancelButtonColor: '#d33',
+						confirmButtonText: '<a href="https://pledge.mygov.in/janatacurfew/" style="color:#fff; text-decoration: none;">Yes, I Pledge!</a>'
+						}).then((result) => {
+						
+						})
+					}, 12000
+					);
+
+
+					var input = document.getElementById("myInput");
+					input.addEventListener("input", myFunction);
+
+					function myFunction(e) {
+					var filter = e.target.value.toUpperCase();
+					console.log(filter)
+
+					var list = document.getElementById("list");
+					var divs = list.getElementsByTagName("span");
+					console.log(divs[1].getElementsByTagName("a")[0])
+					for (var i = 0; i < divs.length; i++) {
+						var a = divs[i].getElementsByTagName("a")[0];
+						console.log(a.innerHTML.toUpperCase().indexOf(filter))
+						if (a) {
+						if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+							divs[i].style.display = "";
+						} else {
+							divs[i].style.display = "none";
+						}
+						}       
+					}
+
+					}
+				
+					
+				
+			</script>
+			<!-- JQuery -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<!-- Bootstrap tooltips -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+			<!-- Bootstrap core JavaScript -->
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+			
+
+			
+		</body>
+</html>
