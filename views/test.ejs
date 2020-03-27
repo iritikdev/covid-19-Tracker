@@ -64,35 +64,6 @@
 		</div>
 		<div class="spacer-10"></div>
 		<div class="container">
-			<div class="row indiarow">
-				
-						<div class="col-md-4 ">
-							<div class="innerdivImg">
-								<img src="<%= indiaCountry.countryInfo.flag%>" alt="" class="imageIndia">
-							</div>	
-						</div>
-						<div class="col-md-4 indiadetailBox">
-							<div class="innerdiv">
-								<p class="countryIndia">Total Cases: <%= indiaCountry.cases%></p>
-								<p class="countryIndia">Today Cases: <%= indiaCountry.todayCases%></p>
-								<p class="countryIndia">Total Deaths: <%= indiaCountry.deaths%></p>
-								<p class="countryIndia">Today Deaths: <%= indiaCountry.todayDeaths%></p>
-							</div>
-														
-						</div>
-						<div class="col-md-4 indiadetailBox">
-							<div class="innerdiv">
-								<p class="countryIndia">Total Recovered: <%= indiaCountry.recovered%></p>
-								<p class="countryIndia">Active Cases: <%= indiaCountry.active%></p>
-								<p class="countryIndia">Critical Cases: <%= indiaCountry.critical%></p>
-							</div>
-							
-						</div>								
-			</div>
-		</div>
-
-		<div class="spacer-10"></div>
-		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="card-covid">
@@ -119,13 +90,19 @@
 					</div>
                 </div>
                 
-                
-               
+                <!--India data -->
+                    <div class="col">
+                        <div class="card-covid">
+                            <div class="allDate"></div>
+                            
+                        </div>
+                    </div>
+                <!--India data -->
 			</div>
 			<div class="spacer-20"></div>
 			<div class="container">
 			
-			<div>
+			<div >
 				<div class="flexContainer" id="list">
 				<% allcountery.forEach(country => { %>
 					<span class="card-covid-country" id="covidId"> 
@@ -186,7 +163,7 @@
 						}).then((result) => {
 						
 						})
-					}, 15000
+					}, 12000
 					);
 
 

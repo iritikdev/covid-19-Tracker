@@ -16,13 +16,15 @@ app.get("/", (req, res) => {
             const nowUpdate = new Date(all.updated)
 
             let allCountry = await covid.getCountry();
-            // console.log(sortedCountries);
+            let indiaCountry = await covid.getCountry({country: 'India'});
+            // console.log(indiaCountry)
         
             res.render("index", {   cases:(all.cases).toLocaleString(), 
                                     deaths:(all.deaths).toLocaleString(), 
                                     recovered:(all.recovered).toLocaleString(), 
                                     update:nowUpdate,
-                                    allcountery:allCountry
+                                    allcountery:allCountry,
+                                    indiaCountry:indiaCountry
                                 }
                     );
         })()  

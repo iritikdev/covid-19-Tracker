@@ -170,3 +170,36 @@ footer p{
 .swal2-title{
     font-family: 'poppins',sans-serif;
 }
+.countryIndia{
+    font-family: 'poppins',sans-serif;
+    font-size: 18px;
+    color: #7081b9;
+}
+.imageIndia{
+    box-shadow: 7px 7px 12px -2px rgba(124, 122, 122, 0.1);
+    border-radius: 5px;
+}
+.indiadetailBox{
+    
+    
+}
+.innerdiv{
+    margin: 16px 2px 15px 2px;
+    background-color: rgba(77, 121, 246, 0.1);
+    color: #7081b9;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+.innerdivImg{
+    margin: 16px 2px 15px 2px;
+    
+    color: #7081b9;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.indiarow{
+    background-color: #1a253f;
+    margin: 5px 1px 5px 1px;
+}
