@@ -16,7 +16,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "novelcovid": "^1.0.7-b3",
     "request": "^2.88.2"
   }
